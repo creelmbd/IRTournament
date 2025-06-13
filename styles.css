@@ -1,4 +1,4 @@
-/* IR999 Golf Tournament - 90s Theme Styles */
+/* IR999 Golf Tournament - 90s Theme Styles (Simplified) */
 @import url('https://fonts.googleapis.com/css2?family=Bungee:wght@400&family=Luckiest+Guy&family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
@@ -19,6 +19,15 @@
       transparent 10px,
       rgba(255, 255, 255, 0.1) 10px,
       rgba(255, 255, 255, 0.1) 20px);
+  --retro-texture:
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(135deg,
+      rgba(255, 0, 255, 0.05) 0%,
+      transparent 25%,
+      rgba(255, 255, 0, 0.05) 50%,
+      transparent 75%,
+      rgba(0, 255, 255, 0.05) 100%);
 }
 
 * {
@@ -35,17 +44,42 @@ body {
   color: var(--white);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* New subtle retro texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--retro-texture);
+  background-size: 60px 60px, 40px 40px, 200px 200px;
+  background-position: 0 0, 30px 30px, 0 0;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: -1;
+  animation: textureFloat 20s linear infinite;
+}
+
+@keyframes textureFloat {
+  0% {
+    background-position: 0 0, 30px 30px, 0 0;
+  }
+  100% {
+    background-position: 60px 60px, 90px 90px, 200px 200px;
+  }
 }
 
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -87,16 +121,13 @@ body {
 }
 
 @keyframes neonFlicker {
-
-  0%,
-  100% {
+  0%, 100% {
     text-shadow:
       0 0 10px var(--neon-teal),
       0 0 20px var(--neon-teal),
       0 0 30px var(--neon-teal),
       3px 3px 0px var(--black);
   }
-
   50% {
     text-shadow:
       0 0 5px var(--neon-teal),
@@ -268,12 +299,9 @@ body {
 }
 
 @keyframes btnPulse {
-
-  0%,
-  100% {
+  0%, 100% {
     box-shadow: 0 0 20px var(--neon-magenta), 0 4px 15px rgba(255, 20, 147, 0.4);
   }
-
   50% {
     box-shadow: 0 0 30px var(--neon-magenta), 0 6px 20px rgba(255, 20, 147, 0.6);
   }
@@ -304,6 +332,36 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 255, 255, 0.5);
   transition: all 0.3s ease;
+}
+
+/* Countdown Timer */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.countdown-item {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--neon-yellow);
+  min-width: 80px;
+}
+
+.countdown-number {
+  font-family: 'Bungee', cursive;
+  font-size: 2rem;
+  color: var(--neon-yellow);
+  text-shadow: 0 0 10px var(--neon-yellow);
+}
+
+.countdown-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Responsive Design */
@@ -351,30 +409,24 @@ body {
   }
 }
 
-/* Special Effects */
+/* Special Effects (simplified) */
 .glitch {
   animation: glitch 1s infinite;
 }
 
 @keyframes glitch {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translate(0);
   }
-
   20% {
     transform: translate(-2px, 2px);
   }
-
   40% {
     transform: translate(-2px, -2px);
   }
-
   60% {
     transform: translate(2px, 2px);
   }
-
   80% {
     transform: translate(2px, -2px);
   }
@@ -387,32 +439,33 @@ body {
     inset 0 0 10px rgba(0, 255, 255, 0.1);
 }
 
-/* Countdown Timer */
-.countdown {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem 0;
+/* New subtle texture variations */
+.textured-section {
+  position: relative;
 }
 
-.countdown-item {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 1rem;
-  border-radius: 10px;
-  border: 2px solid var(--neon-yellow);
-  min-width: 80px;
+.textured-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(255, 0, 255, 0.1) 15%, transparent 15%),
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.1) 15%, transparent 15%),
+    radial-gradient(circle at 40% 40%, rgba(255, 255, 0, 0.05) 10%, transparent 10%);
+  background-size: 100px 100px, 120px 120px, 80px 80px;
+  animation: subtleTextureMove 25s linear infinite;
+  pointer-events: none;
+  z-index: -1;
 }
 
-.countdown-number {
-  font-family: 'Bungee', cursive;
-  font-size: 2rem;
-  color: var(--neon-yellow);
-  text-shadow: 0 0 10px var(--neon-yellow);
-}
-
-.countdown-label {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+@keyframes subtleTextureMove {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 100px 100px, -120px 120px, 80px -80px;
+  }
 }
