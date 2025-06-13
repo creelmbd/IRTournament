@@ -1,12 +1,12 @@
 // IR999 Golf Tournament - Interactive Features
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Mobile Navigation Toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function () {
             navMenu.classList.toggle('active');
 
             // Animate hamburger to X
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const forms = document.querySelectorAll('form');
 
         forms.forEach(form => {
-            form.addEventListener('submit', function(e) {
+            form.addEventListener('submit', function (e) {
                 const requiredFields = form.querySelectorAll('[required]');
                 let isValid = true;
 
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         field.style.boxShadow = '0 0 10px #ff00ff';
 
                         // Remove error styling after user starts typing
-                        field.addEventListener('input', function() {
+                        field.addEventListener('input', function () {
                             this.style.borderColor = '';
                             this.style.boxShadow = '';
                         });
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let konamiCode = [];
     const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // ↑↑↓↓←→←→BA
 
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         konamiCode.push(e.keyCode);
 
         if (konamiCode.length > konamiSequence.length) {
@@ -275,7 +275,7 @@ function scrollToTop() {
 // Make some functions globally available
 window.IR999 = {
     scrollToTop,
-    showNotification: function(message, type) {
+    showNotification: function (message, type) {
         // Implementation would be here if called externally
     }
 };

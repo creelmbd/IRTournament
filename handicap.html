@@ -1,415 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IR999 Golf Tournament - Handicap System</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏌️</text></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IR999 Golf Tournament - Handicap System</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏌️</text></svg>">
 </head>
+
 <body>
-    <!-- Navigation Header -->
-    <nav class="nav-header">
-        <div class="nav-container">
-            <a href="index.html" class="logo">IR999</a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="format.html" class="nav-link">Format</a></li>
-                <li><a href="rules.html" class="nav-link">Rules</a></li>
-                <li><a href="registration.html" class="nav-link">Register</a></li>
+  <!-- Navigation Header -->
+  <nav class="nav-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">IR999</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="format.html" class="nav-link">Format</a></li>
+        <li><a href="rules.html" class="nav-link">Rules</a></li>
+        <li><a href="handicap.html" class="nav-link">Handicap</a></li>
+        <li><a href="teams.html" class="nav-link">Teams</a></li>
+        <li><a href="registration.html" class="nav-link active">Register</a></li>
+      </ul>
+      <button class="nav-toggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <section id="handicap" class="section" style="padding-top: 120px;">
+    <div class="container">
+      <!-- Page Header -->
+      <div class="page-header" style="text-align: center; margin-bottom: 3rem;">
+        <h1 class="section-title">IR999 Assigned Handicap System</h1>
+        <p style="font-size: 1.2rem; color: var(--neon-yellow); margin-top: 1rem;">
+          ⚖️ Fair Competition • Expert Evaluation • Balanced Teams
+        </p>
+      </div>
+
+      <!-- System Overview -->
+      <div class="handicap-intro card" style="margin-bottom: 3rem;">
+        <h2
+          style="font-family: 'Luckiest Guy', cursive; color: var(--neon-teal); font-size: 2rem; margin-bottom: 2rem; text-align: center;">
+          🎯 What is the IR999 Handicap System?
+        </h2>
+
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <p style="font-size: 1.2rem; margin-bottom: 1rem;">
+            To ensure fair competition, the <strong>IR999 Tournament</strong> uses an <strong>Assigned Handicap</strong>
+            model.
+          </p>
+        </div>
+
+        <div class="system-explanation"
+          style="background: rgba(0, 255, 255, 0.1); padding: 2rem; border-radius: 15px; border: 2px solid var(--neon-teal); margin-bottom: 2rem;">
+          <h3 style="color: var(--neon-teal); margin-bottom: 1.5rem; text-align: center;">🧠 What Does That Mean?</h3>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div class="explanation-point"
+              style="background: rgba(0, 0, 0, 0.4); padding: 1.5rem; border-radius: 10px; text-align: center;">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">🚫</div>
+              <h4 style="color: var(--neon-magenta); margin-bottom: 1rem;">NOT Based On</h4>
+              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                <li style="margin: 0.5rem 0;">❌ GHIN handicaps</li>
+                <li style="margin: 0.5rem 0;">❌ USGA ratings</li>
+                <li style="margin: 0.5rem 0;">❌ Self-reporting</li>
+              </ul>
+            </div>
+
+            <div class="explanation-point"
+              style="background: rgba(0, 0, 0, 0.4); padding: 1.5rem; border-radius: 10px; text-align: center;">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">⚖️</div>
+              <h4 style="color: var(--neon-yellow); margin-bottom: 1rem;">Determined By</h4>
+              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                <li style="margin: 0.5rem 0;">✅ Tournament Board</li>
+                <li style="margin: 0.5rem 0;">✅ Past performance</li>
+                <li style="margin: 0.5rem 0;">✅ Known skill level</li>
+                <li style="margin: 0.5rem 0;">✅ Pairing balance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--neon-magenta);">
+          <h4 style="color: var(--neon-magenta); margin-bottom: 1rem;">🎯 The Goal:</h4>
+          <p style="margin: 0; font-size: 1.1rem;">
+            Create the most competitive and balanced tournament possible by evaluating the <strong>strength of each
+              2-man team</strong> and assigning appropriate stroke adjustments.
+          </p>
+        </div>
+      </div>
+
+      <!-- How It Works -->
+      <div class="format-round card" style="margin-bottom: 2rem;">
+        <div class="round-header"
+          style="background: var(--neon-magenta); color: var(--white); padding: 1rem; border-radius: 10px 10px 0 0; margin: -2rem -2rem 2rem -2rem;">
+          <h2
+            style="font-family: 'Luckiest Guy', cursive; font-size: 1.8rem; margin: 0; display: flex; align-items: center; justify-content: center;">
+            ⚙️ How the System Works
+          </h2>
+        </div>
+
+        <div class="round-content">
+          <div class="format-explanation" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--neon-magenta); margin-bottom: 1rem;">Board Evaluation Process:</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li
+                style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-magenta);">
+                📊 <strong>Team Assessment:</strong> Board evaluates the combined strength of each 2-man team
+              </li>
+              <li
+                style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-magenta);">
+                📈 <strong>Historical Data:</strong> Past tournament performance and known skill levels
+              </li>
+              <li
+                style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-magenta);">
+                ⚖️ <strong>Balance Creation:</strong> Strokes assigned to level the playing field
+              </li>
+              <li
+                style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-magenta);">
+                🏆 <strong>Fair Competition:</strong> Every team has a realistic chance to win
+              </li>
             </ul>
-            <button class="nav-toggle">☰</button>
+          </div>
+
+          <div class="stroke-application"
+            style="background: rgba(255, 0, 255, 0.1); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--neon-magenta); margin-bottom: 2rem;">
+            <h4 style="color: var(--neon-magenta); margin-bottom: 1rem;">📋 Stroke Application:</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+              <div style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>Full Round Strokes</strong><br>
+                Applied to total score
+              </div>
+              <div style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>NOT Hole-by-Hole</strong><br>
+                No hole index distribution
+              </div>
+              <div style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>Simple Calculation</strong><br>
+                Final score minus strokes
+              </div>
+            </div>
+          </div>
         </div>
-    </nav>
+      </div>
 
-    <!-- Main Content -->
-    <section id="handicap" class="section" style="padding-top: 120px;">
-        <div class="container">
-            <!-- Page Header -->
-            <div class="page-header" style="text-align: center; margin-bottom: 3rem;">
-                <h1 class="section-title">IR999 Assigned Handicap System</h1>
-                <p style="font-size: 1.2rem; color: var(--neon-yellow); margin-top: 1rem;">
-                    ⚖️ Fair Competition • Expert Evaluation • Balanced Teams
-                </p>
-            </div>
-
-            <!-- System Overview -->
-            <div class="handicap-intro card" style="margin-bottom: 3rem;">
-                <h2 style="font-family: 'Luckiest Guy', cursive; color: var(--neon-teal); font-size: 2rem; margin-bottom: 2rem; text-align: center;">
-                    🎯 What is the IR999 Handicap System?
-                </h2>
-
-                <div style="text-align: center; margin-bottom: 2rem;">
-                    <p style="font-size: 1.2rem; margin-bottom: 1rem;">
-                        To ensure fair competition, the <strong>IR999 Tournament</strong> uses an <strong>Assigned Handicap</strong> model.
-                    </p>
-                </div>
-
-                <div class="system-explanation" style="background: rgba(0, 255, 255, 0.1); padding: 2rem; border-radius: 15px; border: 2px solid var(--neon-teal); margin-bottom: 2rem;">
-                    <h3 style="color: var(--neon-teal); margin-bottom: 1.5rem; text-align: center;">🧠 What Does That Mean?</h3>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                        <div class="explanation-point" style="background: rgba(0, 0, 0, 0.4); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                            <div style="font-size: 2rem; margin-bottom: 1rem;">🚫</div>
-                            <h4 style="color: var(--neon-magenta); margin-bottom: 1rem;">NOT Based On</h4>
-                            <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                                <li style="margin: 0.5rem 0;">❌ GHIN handicaps</li>
-                                <li style="margin: 0.5rem 0;">❌ USGA ratings</li>
-                                <li style="margin: 0.5rem 0;">❌ Self-reporting</li>
-                            </ul>
-                        </div>
-
-                        <div class="explanation-point" style="background: rgba(0, 0, 0, 0.4); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                            <div style="font-size: 2rem; margin-bottom: 1rem;">⚖️</div>
-                            <h4 style="color: var(--neon-yellow); margin-bottom: 1rem;">Determined By</h4>
-                            <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                                <li style="margin: 0.5rem 0;">✅ Tournament Board</li>
-                                <li style="margin: 0.5rem 0;">✅ Past performance</li>
-                                <li style="margin: 0.5rem 0;">✅ Known skill level</li>
-                                <li style="margin: 0.5rem 0;">✅ Pairing balance</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--neon-magenta);">
-                    <h4 style="color: var(--neon-magenta); margin-bottom: 1rem;">🎯 The Goal:</h4>
-                    <p style="margin: 0; font-size: 1.1rem;">
-                        Create the most competitive and balanced tournament possible by evaluating the <strong>strength of each 2-man team</strong> and assigning appropriate stroke adjustments.
-                    </p>
-                </div>
-            </div>
-
-            <!-- How It Works -->
-            <div class="format-round card" style="margin-bottom: 2rem;">
-                <div class="round-header" style="background: var(--neon-magenta); color: var(--white); padding: 1rem; border-radius: 10px 10px 0 0; margin: -2rem -2rem 2rem -2rem;">
-                    <h2 style="font-family: 'Luckiest Guy', cursive; font-size: 1.8rem; margin: 0; display: flex; align-items: center; justify-content: center;">
-                        ⚙️ How the System Works
-                    </h2>
-                </div>
-
-                <div class="round-content">
-                    <div class="format-explanation" style="margin-bottom: 2rem;">
-                        <h3 style="color: var(--neon-magenta); margin-bottom: 1rem;">Board Evaluation Process:</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-magenta);">
-                                📊 <strong>Team Assessment:</strong> Board evaluates the combined strength of each 2-man team
-                            </li>
-                            <li style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-magenta);">
-                                📈 <strong>Historical Data:</strong> Past tournament performance and known skill levels
-                            </li>
-                            <li style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-magenta);">
-                                ⚖️ <strong>Balance Creation:</strong> Strokes assigned to level the playing field
-                            </li>
-                            <li style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-magenta);">
-                                🏆 <strong>Fair Competition:</strong> Every team has a realistic chance to win
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="stroke-application" style="background: rgba(255, 0, 255, 0.1); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--neon-magenta); margin-bottom: 2rem;">
-                        <h4 style="color: var(--neon-magenta); margin-bottom: 1rem;">📋 Stroke Application:</h4>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                            <div style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 8px; text-align: center;">
-                                <strong>Full Round Strokes</strong><br>
-                                Applied to total score
-                            </div>
-                            <div style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 8px; text-align: center;">
-                                <strong>NOT Hole-by-Hole</strong><br>
-                                No hole index distribution
-                            </div>
-                            <div style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 8px; text-align: center;">
-                                <strong>Simple Calculation</strong><br>
-                                Final score minus strokes
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Example Scenarios -->
-            <div class="format-round card" style="margin-bottom: 2rem;">
-                <div class="round-header" style="background: var(--neon-yellow); color: var(--black); padding: 1rem; border-radius: 10px 10px 0 0; margin: -2rem -2rem 2rem -2rem;">
-                    <h2 style="font-family: 'Luckiest Guy', cursive; font-size: 1.8rem; margin: 0; display: flex; align-items: center; justify-content: center;">
-                        📊 Example Handicap Assignments
-                    </h2>
-                </div>
-
-                <div class="round-content">
-                    <div class="example-scenarios">
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-
-                            <!-- Team 1 Example -->
-                            <div class="team-example" style="background: rgba(0, 255, 255, 0.1); padding: 2rem; border-radius: 15px; border: 2px solid var(--neon-teal); text-align: center;">
-                                <h3 style="color: var(--neon-teal); margin-bottom: 1.5rem;">Team 1</h3>
-                                <div class="team-composition" style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
-                                    <div style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>A Player + A Player</strong></div>
-                                    <div style="font-size: 0.9rem; opacity: 0.9;">Strong + Strong</div>
-                                </div>
-                                <div class="handicap-assignment" style="background: var(--neon-teal); color: var(--black); padding: 1rem; border-radius: 10px; font-weight: bold; font-size: 1.2rem;">
-                                    HANDICAP: EVEN
-                                </div>
-                                <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-                                    No stroke advantage needed
-                                </div>
-                            </div>
-
-                            <!-- Team 2 Example -->
-                            <div class="team-example" style="background: rgba(255, 0, 255, 0.1); padding: 2rem; border-radius: 15px; border: 2px solid var(--neon-magenta); text-align: center;">
-                                <h3 style="color: var(--neon-magenta); margin-bottom: 1.5rem;">Team 2</h3>
-                                <div class="team-composition" style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
-                                    <div style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>B Player + C Player</strong></div>
-                                    <div style="font-size: 0.9rem; opacity: 0.9;">Average + Developing</div>
-                                </div>
-                                <div class="handicap-assignment" style="background: var(--neon-magenta); color: var(--white); padding: 1rem; border-radius: 10px; font-weight: bold; font-size: 1.2rem;">
-                                    HANDICAP: +6 STROKES
-                                </div>
-                                <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-                                    6 strokes deducted from final score
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="example-explanation" style="background: rgba(255, 255, 0, 0.1); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--neon-yellow);">
-                            <h4 style="color: var(--neon-yellow); margin-bottom: 1rem; text-align: center;">💡 How This Creates Balance:</h4>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
-                                <div style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: 8px;">
-                                    <strong>Team 1 shoots 85</strong><br>
-                                    Final Score: 85
-                                </div>
-                                <div style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: 8px;">
-                                    <strong>Team 2 shoots 91</strong><br>
-                                    Final Score: 85 (91-6)
-                                </div>
-                                <div style="background: rgba(0, 255, 0, 0.2); padding: 1rem; border-radius: 8px; border: 2px solid #00ff00;">
-                                    <strong>Result: TIE!</strong><br>
-                                    Fair competition achieved
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Governance Board -->
-            <div class="format-round card" style="margin-bottom: 2rem;">
-                <div class="round-header" style="background: var(--neon-purple); color: var(--white); padding: 1rem; border-radius: 10px 10px 0 0; margin: -2rem -2rem 2rem -2rem;">
-                    <h2 style="font-family: 'Luckiest Guy', cursive; font-size: 1.8rem; margin: 0; display: flex; align-items: center; justify-content: center;">
-                        👑 Tournament Governance Board
-                    </h2>
-                </div>
-
-                <div class="round-content">
-                    <div class="format-explanation" style="margin-bottom: 2rem;">
-                        <h3 style="color: var(--neon-purple); margin-bottom: 1rem;">Board Responsibilities:</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-purple);">
-                                🎯 <strong>Handicap Assignment:</strong> Evaluate and assign team handicaps fairly
-                            </li>
-                            <li style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-purple);">
-                                ⚖️ <strong>Rules Interpretation:</strong> Make final decisions on rule disputes
-                            </li>
-                            <li style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-purple);">
-                                🏆 <strong>Competition Integrity:</strong> Ensure fair play and sportsmanship
-                            </li>
-                            <li style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-purple);">
-                                📊 <strong>Ongoing Assessment:</strong> Adjust handicaps based on performance trends
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="board-principles" style="background: rgba(138, 43, 226, 0.1); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--neon-purple);">
-                        <h4 style="color: var(--neon-purple); margin-bottom: 1rem; text-align: center;">🧠 Board Decision Principles:</h4>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                            <div style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: 8px; text-align: center;">
-                                <strong>🔍 Objective Analysis</strong><br>
-                                Data-driven decisions
-                            </div>
-                            <div style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: 8px; text-align: center;">
-                                <strong>🤝 Collaborative Review</strong><br>
-                                Multiple board members
-                            </div>
-                            <div style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: 8px; text-align: center;">
-                                <strong>⚖️ Fair & Transparent</strong><br>
-                                Open to questions
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Player Skill Classifications -->
-            <div class="skill-classifications card" style="margin-bottom: 3rem;">
-                <h2 style="font-family: 'Luckiest Guy', cursive; color: var(--neon-teal); font-size: 2rem; margin-bottom: 2rem; text-align: center;">
-                    🏌️ Player Skill Classifications
-                </h2>
-
-                <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">
-                    Understanding how players are categorized helps explain handicap assignments
-                </p>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                    <div class="skill-tier" style="background: rgba(255, 215, 0, 0.1); padding: 1.5rem; border-radius: 15px; border: 2px solid #ffd700; text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 1rem;">🏆</div>
-                        <h3 style="color: #ffd700; margin-bottom: 1rem;">A Players</h3>
-                        <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                            <li style="margin: 0.3rem 0;">• Low handicap golfers</li>
-                            <li style="margin: 0.3rem 0;">• Consistent performance</li>
-                            <li style="margin: 0.3rem 0;">• Tournament experience</li>
-                            <li style="margin: 0.3rem 0;">• Strong short game</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-tier" style="background: rgba(192, 192, 192, 0.1); padding: 1.5rem; border-radius: 15px; border: 2px solid #c0c0c0; text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 1rem;">⭐</div>
-                        <h3 style="color: #c0c0c0; margin-bottom: 1rem;">B Players</h3>
-                        <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                            <li style="margin: 0.3rem 0;">• Mid-level handicap</li>
-                            <li style="margin: 0.3rem 0;">• Solid fundamentals</li>
-                            <li style="margin: 0.3rem 0;">• Some inconsistency</li>
-                            <li style="margin: 0.3rem 0;">• Improving game</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-tier" style="background: rgba(205, 127, 50, 0.1); padding: 1.5rem; border-radius: 15px; border: 2px solid #cd7f32; text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 1rem;">📈</div>
-                        <h3 style="color: #cd7f32; margin-bottom: 1rem;">C Players</h3>
-                        <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                            <li style="margin: 0.3rem 0;">• Higher handicap</li>
-                            <li style="margin: 0.3rem 0;">• Developing skills</li>
-                            <li style="margin: 0.3rem 0;">• Enthusiastic golfers</li>
-                            <li style="margin: 0.3rem 0;">• Learning the game</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="margin-top: 2rem; background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                    <h4 style="color: var(--neon-magenta); margin-bottom: 1rem;">💡 Team Balance Examples:</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.9rem;">
-                        <div style="background: rgba(0, 0, 0, 0.3); padding: 0.8rem; border-radius: 8px;">
-                            <strong>A + A = EVEN</strong><br>Strong pairing
-                        </div>
-                        <div style="background: rgba(0, 0, 0, 0.3); padding: 0.8rem; border-radius: 8px;">
-                            <strong>A + B = +2-4</strong><br>Slight advantage
-                        </div>
-                        <div style="background: rgba(0, 0, 0, 0.3); padding: 0.8rem; border-radius: 8px;">
-                            <strong>A + C = +4-6</strong><br>Good balance
-                        </div>
-                        <div style="background: rgba(0, 0, 0, 0.3); padding: 0.8rem; border-radius: 8px;">
-                            <strong>B + B = +3-5</strong><br>Average team
-                        </div>
-                        <div style="background: rgba(0, 0, 0, 0.3); padding: 0.8rem; border-radius: 8px;">
-                            <strong>B + C = +6-8</strong><br>Developing team
-                        </div>
-                        <div style="background: rgba(0, 0, 0, 0.3); padding: 0.8rem; border-radius: 8px;">
-                            <strong>C + C = +8-12</strong><br>Learning together
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Frequently Asked Questions -->
-            <div class="faq-section card" style="margin-bottom: 3rem;">
-                <h2 style="font-family: 'Luckiest Guy', cursive; color: var(--neon-yellow); font-size: 2rem; margin-bottom: 2rem; text-align: center;">
-                    ❓ Frequently Asked Questions
-                </h2>
-
-                <div class="faq-list">
-                    <div class="faq-item" style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid var(--neon-teal);">
-                        <h4 style="color: var(--neon-teal); margin-bottom: 1rem;">Q: Can I request a specific handicap?</h4>
-                        <p style="margin: 0;">A: Handicaps are determined solely by the Board based on objective evaluation. However, you're welcome to discuss your skill level during registration.</p>
-                    </div>
-
-                    <div class="faq-item" style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid var(--neon-magenta);">
-                        <h4 style="color: var(--neon-magenta); margin-bottom: 1rem;">Q: What if I disagree with my team's handicap?</h4>
-                        <p style="margin: 0;">A: You can respectfully discuss concerns with the Board before the tournament. All decisions are made with fairness in mind and are final.</p>
-                    </div>
-
-                    <div class="faq-item" style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid var(--neon-yellow);">
-                        <h4 style="color: var(--neon-yellow); margin-bottom: 1rem;">Q: How are strokes applied during different formats?</h4>
-                        <p style="margin: 0;">A: Your team's handicap strokes apply to your final score for each 9-hole segment. The strokes are the same regardless of format (Best Ball, Alternate Shot, or Scramble).</p>
-                    </div>
-
-                    <div class="faq-item" style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid var(--neon-purple);">
-                        <h4 style="color: var(--neon-purple); margin-bottom: 1rem;">Q: Will handicaps change between tournaments?</h4>
-                        <p style="margin: 0;">A: Yes! The Board continuously evaluates performance and may adjust handicaps for future tournaments to maintain competitive balance.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Navigation to Next Section -->
-            <div class="section-navigation" style="text-align: center; margin-top: 3rem;">
-                <a href="registration.html" class="retro-btn" style="margin-right: 1rem;">Register for Tournament</a>
-                <a href="rules.html" class="retro-btn secondary">Back to Rules</a>
-            </div>
+      <!-- Example Scenarios -->
+      <div class="format-round card" style="margin-bottom: 2rem;">
+        <div class="round-header"
+          style="background: var(--neon-yellow); color: var(--black); padding: 1rem; border-radius: 10px 10px 0 0; margin: -2rem -2rem 2rem -2rem;">
+          <h2
+            style="font-family: 'Luckiest Guy', cursive; font-size: 1.8rem; margin: 0; display: flex; align-items: center; justify-content: center;">
+            📊 Example Handicap Assignments
+          </h2>
         </div>
-    </section>
 
-    <script src="script.js"></script>
-    <script>
-        // Handicap page specific interactions
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add hover effects to team examples
-            const teamExamples = document.querySelectorAll('.team-example');
-            teamExamples.forEach(example => {
-                example.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px) scale(1.03)';
-                    this.style.transition = 'all 0.3s ease';
-                    this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
-                });
+        <div class="round-content">
+          <div class="example-scenarios">
+            <div
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
 
-                example.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                    this.style.boxShadow = 'none';
-                });
-            });
+              <!-- Team 1 Example -->
+              <div class="team-example"
+                style="background: rgba(0, 255, 255, 0.1); padding: 2rem; border-radius: 15px; border: 2px solid var(--neon-teal); text-align: center;">
+                <h3 style="color: var(--neon-teal); margin-bottom: 1.5rem;">Team 1</h3>
+                <div class="team-composition"
+                  style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
+                  <div style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>A Player + A Player</strong></div>
+                  <div style="font-size: 0.9rem; opacity: 0.9;">Strong + Strong</div>
+                </div>
+                <div class="handicap-assignment"
+                  style="background: var(--neon-teal); color: var(--black); padding: 1rem; border-radius: 10px; font-weight: bold; font-size: 1.2rem;">
+                  HANDICAP: EVEN
+                </div>
+                <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                  No stroke advantage needed
+                </div>
+              </div>
 
-            // Add hover effects to skill tiers
-            const skillTiers = document.querySelectorAll('.skill-tier');
-            skillTiers.forEach(tier => {
-                tier.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-3px) scale(1.02)';
-                    this.style.transition = 'all 0.3s ease';
-                });
+              <!-- Team 2 Example -->
+              <div class="team-example"
+                style="background: rgba(255, 0, 255, 0.1); padding: 2rem; border-radius: 15px; border: 2px solid var(--neon-magenta); text-align: center;">
+                <h3 style="color: var(--neon-magenta); margin-bottom: 1.5rem;">Team 2</h3>
+                <div class="team-composition"
+                  style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
+                  <div style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>B Player + C Player</strong></div>
+                  <div style="font-size: 0.9rem; opacity: 0.9;">Average + Developing</div>
+                </div>
+                <div class="handicap-assignment"
+                  style="background: var(--neon-magenta); color: var(--white); padding: 1rem; border-radius: 10px; font-weight: bold; font-size: 1.2rem;">
+                  HANDICAP: +6 STROKES
+                </div>
+                <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                  6 strokes deducted from final score
+                </div>
+              </div>
+            </div>
 
-                tier.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
+            <div class="example-explanation"
+              style="background: rgba(255, 255, 0, 0.1); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--neon-yellow);">
+              <h4 style="color: var(--neon-yellow); margin-bottom: 1rem; text-align: center;">💡 How This Creates
+                Balance:</h4>
+              <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+                <div style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: 8px;">
+                  <strong>Team 1 shoots 85</strong><br>
+                  Final Score: 85
+                </div>
+                <div style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: 8px;">
+                  <strong>Team 2 shoots 91</strong><br>
+                  Final Score: 85 (91-6)
+                </div>
+                <div
+                  style="background: rgba(0, 255, 0, 0.2); padding: 1rem; border-radius: 8px; border: 2px solid #00ff00;">
+                  <strong>Result: TIE!</strong><br>
+                  Fair competition achieved
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            // Interactive FAQ items
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                item.style.cursor = 'pointer';
+      <!-- Governance Board -->
+      <div class="format-round card" style="margin-bottom: 2rem;">
+        <div class="round-header"
+          style="background: var(--neon-purple); color: var(--white); padding: 1rem; border-radius: 10px 10px 0 0; margin: -2rem -2rem 2rem -2rem;">
+          <h2
+            style="font-family: 'Luckiest Guy', cursive; font-size: 1.8rem; margin: 0; display: flex; align-items: center; justify-content: center;">
+            👑 Tournament Governance Board
+          </h2>
+        </div>
 
-                item.addEventListener('click', function() {
-                    // Add a "read" animation
-                    this.style.animation = 'faqRead 0.5s ease';
+        <div class="round-content">
+          <div class="format-explanation" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--neon-purple); margin-bottom: 1rem;">Board Responsibilities:</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li
+                style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-purple);">
+                🎯 <strong>Handicap Assignment:</strong> Evaluate and assign team handicaps fairly
+              </li>
+              <li
+                style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-purple);">
+                ⚖️ <strong>Rules Interpretation:</strong> Make final decisions on rule disputes
+              </li>
+              <li
+                style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-purple);">
+                🏆 <strong>Competition Integrity:</strong> Ensure fair play and sportsmanship
+              </li>
+              <li
+                style="margin: 0.8rem 0; padding: 0.8rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border-left: 4px solid var(--neon-purple);">
+                📊 <strong>Ongoing Assessment:</strong> Adjust handicaps based on performance trends
+              </li>
+            </ul>
+          </div>
 
-                    setTimeout(() => {
-                        this.style.animation = '';
-                    }, 500);
-                });
+          <div class="board-principles"
+            style="background: rgba(138, 43, 226, 0.1); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--neon-purple);">
+            <h4 style="color: var(--neon-purple); margin-bottom: 1rem; text-align: center;">🧠 Board Decision
+              Principles:</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+              <div style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>🔍 Objective Analysis</strong><br>
+                Data-driven decisions
+              </div>
+              <div style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>🤝 Collaborative Review</strong><br>
+                Multiple board members
+              </div>
+              <div style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>⚖️ Fair & Transparent</strong><br>
+                Open to questions
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                item.addEventListener('mouseenter', function() {
-                    this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-                    this.style.transform = 'translateX(5px)';
-                    this.style.transition = 'all 0.3s ease';
-                });
+      <!-- Player Skill Classifications -->
+      <div class="skill-classifications card" style="margin-bottom: 3rem;">
+        <h2
+          style="font-family: 'Luckiest Guy', cursive; color: var(--neon-teal); font-size: 2rem; margin-bottom: 2rem; text-align: center;">
+          🏌️ Player Skill Classifications
+        </h2>
 
-                item.addEventListener('mouseleave', function() {
-                    this.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
-                    this.style.transform = 'translateX(0)';
-                });
-            });
+        <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">
+          Understanding how players are categorized helps explain handicap assignments
+        </p>
 
-            // Handicap Calculator
-            function addHandicapCalculator() {
-                const skillSection = document.querySelector('.skill-classifications');
-                if (!skillSection) return;
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+          <div class="skill-tier"
+            style="background: rgba(255, 215, 0, 0.1); padding: 1.5rem; border-radius: 15px; border: 2px solid #ffd700; text-align: center;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">🏆</div>
+            <h3 style="color: #ffd700; margin-bottom: 1rem;">A Players</h3>
+            <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+              <li style="margin: 0.3rem 0;">• Low handicap golfers</li>
+              <li style="margin: 0.3rem 0;">• Consistent performance</li>
+              <li style="margin: 0.3rem 0;">• Tournament experience</li>
+              <li style="margin: 0.3rem 0;">• Strong short game</li>
+            </ul>
+          </div>
 
-                const calculator = document.createElement('div');
-                calculator.innerHTML = `
+          <div class="skill-tier"
+            style="background: rgba(192, 192, 192, 0.1); padding: 1.5rem; border-radius: 15px; border: 2px solid #c0c0c0; text-align: center;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">⭐</div>
+            <h3 style="color: #c0c0c0; margin-bottom: 1rem;">B Players</h3>
+            <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+              <li style="margin: 0.3rem 0;">• Mid-level handicap</li>
+              <li style="margin: 0.3rem 0;">• Solid fundamentals</li>
+              <li style="margin: 0.3rem 0;">• Some inconsistency</li>
+              <li style="margin: 0.3rem 0;">• Improving game</li>
+            </ul>
+          </div>
+
+          <div class="skill-tier"
+            style="background: rgba(205, 127, 50, 0.1); padding: 1.5rem; border-radius: 15px; border: 2px solid #cd7f32; text-align: center;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">📈</div>
+            <h3 style="color: #cd7f32; margin-bottom: 1rem;">C Players</h3>
+            <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+              <li style="margin: 0.3rem 0;">• Higher handicap</li>
+              <li style="margin: 0.3rem 0;">• Developing skills</li>
+              <li style="margin: 0.3rem 0;">• Enthusiastic golfers</li>
+              <li style="margin: 0.3rem 0;">• Learning the game</li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          style="margin-top: 2rem; background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; text-align: center;">
+          <h4 style="color: var(--neon-magenta); margin-bottom: 1rem;">💡 Team Balance Examples:</h4>
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.9rem;">
+            <div style="background: rgba(0, 0, 0, 0.3); padding: 0.8rem; border-radius: 8px;">
+              <strong>A + A = EVEN</strong><br>Strong pairing
+            </div>
+            <div style="background: rgba(0, 0, 0, 0.3); padding: 0.8rem; border-radius: 8px;">
+              <strong>A + B = +2-4</strong><br>Slight advantage
+            </div>
+            <div style="background: rgba(0, 0, 0, 0.3); padding: 0.8rem; border-radius: 8px;">
+              <strong>A + C = +4-6</strong><br>Good balance
+            </div>
+            <div style="background: rgba(0, 0, 0, 0.3); padding: 0.8rem; border-radius: 8px;">
+              <strong>B + B = +3-5</strong><br>Average team
+            </div>
+            <div style="background: rgba(0, 0, 0, 0.3); padding: 0.8rem; border-radius: 8px;">
+              <strong>B + C = +6-8</strong><br>Developing team
+            </div>
+            <div style="background: rgba(0, 0, 0, 0.3); padding: 0.8rem; border-radius: 8px;">
+              <strong>C + C = +8-12</strong><br>Learning together
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frequently Asked Questions -->
+      <div class="faq-section card" style="margin-bottom: 3rem;">
+        <h2
+          style="font-family: 'Luckiest Guy', cursive; color: var(--neon-yellow); font-size: 2rem; margin-bottom: 2rem; text-align: center;">
+          ❓ Frequently Asked Questions
+        </h2>
+
+        <div class="faq-list">
+          <div class="faq-item"
+            style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid var(--neon-teal);">
+            <h4 style="color: var(--neon-teal); margin-bottom: 1rem;">Q: Can I request a specific handicap?</h4>
+            <p style="margin: 0;">A: Handicaps are determined solely by the Board based on objective evaluation.
+              However, you're welcome to discuss your skill level during registration.</p>
+          </div>
+
+          <div class="faq-item"
+            style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid var(--neon-magenta);">
+            <h4 style="color: var(--neon-magenta); margin-bottom: 1rem;">Q: What if I disagree with my team's handicap?
+            </h4>
+            <p style="margin: 0;">A: You can respectfully discuss concerns with the Board before the tournament. All
+              decisions are made with fairness in mind and are final.</p>
+          </div>
+
+          <div class="faq-item"
+            style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid var(--neon-yellow);">
+            <h4 style="color: var(--neon-yellow); margin-bottom: 1rem;">Q: How are strokes applied during different
+              formats?</h4>
+            <p style="margin: 0;">A: Your team's handicap strokes apply to your final score for each 9-hole segment. The
+              strokes are the same regardless of format (Best Ball, Alternate Shot, or Scramble).</p>
+          </div>
+
+          <div class="faq-item"
+            style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid var(--neon-purple);">
+            <h4 style="color: var(--neon-purple); margin-bottom: 1rem;">Q: Will handicaps change between tournaments?
+            </h4>
+            <p style="margin: 0;">A: Yes! The Board continuously evaluates performance and may adjust handicaps for
+              future tournaments to maintain competitive balance.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation to Next Section -->
+      <div class="section-navigation" style="text-align: center; margin-top: 3rem;">
+        <a href="registration.html" class="retro-btn" style="margin-right: 1rem;">Register for Tournament</a>
+        <a href="rules.html" class="retro-btn secondary">Back to Rules</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    // Handicap page specific interactions
+    document.addEventListener('DOMContentLoaded', function () {
+      // Add hover effects to team examples
+      const teamExamples = document.querySelectorAll('.team-example');
+      teamExamples.forEach(example => {
+        example.addEventListener('mouseenter', function () {
+          this.style.transform = 'translateY(-5px) scale(1.03)';
+          this.style.transition = 'all 0.3s ease';
+          this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
+        });
+
+        example.addEventListener('mouseleave', function () {
+          this.style.transform = 'translateY(0) scale(1)';
+          this.style.boxShadow = 'none';
+        });
+      });
+
+      // Add hover effects to skill tiers
+      const skillTiers = document.querySelectorAll('.skill-tier');
+      skillTiers.forEach(tier => {
+        tier.addEventListener('mouseenter', function () {
+          this.style.transform = 'translateY(-3px) scale(1.02)';
+          this.style.transition = 'all 0.3s ease';
+        });
+
+        tier.addEventListener('mouseleave', function () {
+          this.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+
+      // Interactive FAQ items
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        item.style.cursor = 'pointer';
+
+        item.addEventListener('click', function () {
+          // Add a "read" animation
+          this.style.animation = 'faqRead 0.5s ease';
+
+          setTimeout(() => {
+            this.style.animation = '';
+          }, 500);
+        });
+
+        item.addEventListener('mouseenter', function () {
+          this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+          this.style.transform = 'translateX(5px)';
+          this.style.transition = 'all 0.3s ease';
+        });
+
+        item.addEventListener('mouseleave', function () {
+          this.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+          this.style.transform = 'translateX(0)';
+        });
+      });
+
+      // Handicap Calculator
+      function addHandicapCalculator() {
+        const skillSection = document.querySelector('.skill-classifications');
+        if (!skillSection) return;
+
+        const calculator = document.createElement('div');
+        calculator.innerHTML = `
                     <div class="card" style="margin-top: 3rem; background: rgba(0, 0, 0, 0.6); border: 2px solid var(--neon-teal);">
                         <h3 style="font-family: 'Luckiest Guy', cursive; color: var(--neon-teal); margin-bottom: 1rem; text-align: center;">
                             🧮 Team Handicap Estimator
@@ -450,62 +508,80 @@
                     </div>
                 `;
 
-                skillSection.appendChild(calculator);
+        skillSection.appendChild(calculator);
 
-                const player1Select = document.getElementById('player1Level');
-                const player2Select = document.getElementById('player2Level');
-                const estimateDiv = document.getElementById('handicapEstimate');
+        const player1Select = document.getElementById('player1Level');
+        const player2Select = document.getElementById('player2Level');
+        const estimateDiv = document.getElementById('handicapEstimate');
 
-                function updateEstimate() {
-                    const p1 = player1Select.value;
-                    const p2 = player2Select.value;
+        function updateEstimate() {
+          const p1 = player1Select.value;
+          const p2 = player2Select.value;
 
-                    if (!p1 || !p2) {
-                        estimateDiv.textContent = 'Select both player levels to see estimate';
-                        return;
-                    }
+          if (!p1 || !p2) {
+            estimateDiv.textContent = 'Select both player levels to see estimate';
+            return;
+          }
 
-                    const combinations = {
-                        'AA': { strokes: 0, desc: 'EVEN - No handicap strokes' },
-                        'AB': { strokes: 3, desc: '+3 STROKES - Slight advantage' },
-                        'AC': { strokes: 5, desc: '+5 STROKES - Good balance' },
-                        'BB': { strokes: 4, desc: '+4 STROKES - Average team' },
-                        'BC': { strokes: 7, desc: '+7 STROKES - Developing team' },
-                        'CC': { strokes: 10, desc: '+10 STROKES - Learning together' }
-                    };
+          const combinations = {
+            'AA': {
+              strokes: 0,
+              desc: 'EVEN - No handicap strokes'
+            },
+            'AB': {
+              strokes: 3,
+              desc: '+3 STROKES - Slight advantage'
+            },
+            'AC': {
+              strokes: 5,
+              desc: '+5 STROKES - Good balance'
+            },
+            'BB': {
+              strokes: 4,
+              desc: '+4 STROKES - Average team'
+            },
+            'BC': {
+              strokes: 7,
+              desc: '+7 STROKES - Developing team'
+            },
+            'CC': {
+              strokes: 10,
+              desc: '+10 STROKES - Learning together'
+            }
+          };
 
-                    // Sort the combination key alphabetically
-                    const key = [p1, p2].sort().join('');
-                    const result = combinations[key];
+          // Sort the combination key alphabetically
+          const key = [p1, p2].sort().join('');
+          const result = combinations[key];
 
-                    if (result) {
-                        estimateDiv.innerHTML = `
+          if (result) {
+            estimateDiv.innerHTML = `
                             <div style="background: rgba(0, 255, 255, 0.2); padding: 1rem; border-radius: 10px; border: 2px solid var(--neon-teal);">
                                 <div style="font-size: 1.4rem; margin-bottom: 0.5rem;">${result.desc}</div>
                                 <div style="font-size: 0.9rem; opacity: 0.9;">Estimated handicap for ${p1} + ${p2} pairing</div>
                             </div>
                         `;
 
-                        estimateDiv.style.animation = 'estimateUpdate 0.5s ease';
-                        setTimeout(() => {
-                            estimateDiv.style.animation = '';
-                        }, 500);
-                    }
-                }
+            estimateDiv.style.animation = 'estimateUpdate 0.5s ease';
+            setTimeout(() => {
+              estimateDiv.style.animation = '';
+            }, 500);
+          }
+        }
 
-                player1Select.addEventListener('change', updateEstimate);
-                player2Select.addEventListener('change', updateEstimate);
-            }
+        player1Select.addEventListener('change', updateEstimate);
+        player2Select.addEventListener('change', updateEstimate);
+      }
 
-            addHandicapCalculator();
+      addHandicapCalculator();
 
-            // Board decision simulator
-            function addBoardSimulator() {
-                const governanceSection = document.querySelector('.format-round');
-                if (!governanceSection) return;
+      // Board decision simulator
+      function addBoardSimulator() {
+        const governanceSection = document.querySelector('.format-round');
+        if (!governanceSection) return;
 
-                const simulator = document.createElement('div');
-                simulator.innerHTML = `
+        const simulator = document.createElement('div');
+        simulator.innerHTML = `
                     <div style="margin-top: 2rem; background: rgba(138, 43, 226, 0.1); padding: 2rem; border-radius: 15px; border: 2px solid var(--neon-purple);">
                         <h4 style="color: var(--neon-purple); margin-bottom: 1rem; text-align: center;">🎲 Board Decision Simulator</h4>
                         <p style="text-align: center; margin-bottom: 1.5rem; font-size: 0.9rem;">
@@ -523,51 +599,50 @@
                     </div>
                 `;
 
-                // Find the board principles section and add after it
-                const boardPrinciples = governanceSection.querySelector('.board-principles');
-                if (boardPrinciples) {
-                    boardPrinciples.parentNode.insertBefore(simulator, boardPrinciples.nextSibling);
-                }
+        // Find the board principles section and add after it
+        const boardPrinciples = governanceSection.querySelector('.board-principles');
+        if (boardPrinciples) {
+          boardPrinciples.parentNode.insertBefore(simulator, boardPrinciples.nextSibling);
+        }
 
-                const simulateButton = document.getElementById('simulateDecision');
-                const resultDiv = document.getElementById('simulationResult');
+        const simulateButton = document.getElementById('simulateDecision');
+        const resultDiv = document.getElementById('simulationResult');
 
-                const scenarios = [
-                    {
-                        team: 'Team Alpha',
-                        composition: 'Experienced A Player + Consistent A Player',
-                        factors: ['Low tournament scores', 'Strong short game', 'Course management'],
-                        decision: 'EVEN',
-                        reasoning: 'Both players have proven ability to score well consistently'
-                    },
-                    {
-                        team: 'Team Bravo',
-                        composition: 'Solid B Player + Improving B Player',
-                        factors: ['Mid-range handicaps', 'Some inconsistency', 'Good fundamentals'],
-                        decision: '+4 STROKES',
-                        reasoning: 'Average skill level requires moderate handicap for balance'
-                    },
-                    {
-                        team: 'Team Charlie',
-                        composition: 'Veteran A Player + Enthusiastic C Player',
-                        factors: ['Mixed skill levels', 'One strong player', 'Mentoring dynamic'],
-                        decision: '+5 STROKES',
-                        reasoning: 'Balanced pairing needs handicap to compete with strong teams'
-                    },
-                    {
-                        team: 'Team Delta',
-                        composition: 'Learning C Player + Developing C Player',
-                        factors: ['Higher handicaps', 'Still learning', 'Great attitudes'],
-                        decision: '+9 STROKES',
-                        reasoning: 'Significant handicap needed to ensure competitive opportunity'
-                    }
-                ];
+        const scenarios = [{
+            team: 'Team Alpha',
+            composition: 'Experienced A Player + Consistent A Player',
+            factors: ['Low tournament scores', 'Strong short game', 'Course management'],
+            decision: 'EVEN',
+            reasoning: 'Both players have proven ability to score well consistently'
+          },
+          {
+            team: 'Team Bravo',
+            composition: 'Solid B Player + Improving B Player',
+            factors: ['Mid-range handicaps', 'Some inconsistency', 'Good fundamentals'],
+            decision: '+4 STROKES',
+            reasoning: 'Average skill level requires moderate handicap for balance'
+          },
+          {
+            team: 'Team Charlie',
+            composition: 'Veteran A Player + Enthusiastic C Player',
+            factors: ['Mixed skill levels', 'One strong player', 'Mentoring dynamic'],
+            decision: '+5 STROKES',
+            reasoning: 'Balanced pairing needs handicap to compete with strong teams'
+          },
+          {
+            team: 'Team Delta',
+            composition: 'Learning C Player + Developing C Player',
+            factors: ['Higher handicaps', 'Still learning', 'Great attitudes'],
+            decision: '+9 STROKES',
+            reasoning: 'Significant handicap needed to ensure competitive opportunity'
+          }
+        ];
 
-                simulateButton.addEventListener('click', function() {
-                    const scenario = scenarios[Math.floor(Math.random() * scenarios.length)];
+        simulateButton.addEventListener('click', function () {
+          const scenario = scenarios[Math.floor(Math.random() * scenarios.length)];
 
-                    resultDiv.style.display = 'block';
-                    resultDiv.innerHTML = `
+          resultDiv.style.display = 'block';
+          resultDiv.innerHTML = `
                         <div style="text-align: center; margin-bottom: 1rem;">
                             <h5 style="color: var(--neon-purple); margin-bottom: 0.5rem;">${scenario.team}</h5>
                             <div style="font-size: 0.9rem; margin-bottom: 1rem;">${scenario.composition}</div>
@@ -589,15 +664,15 @@
                         </div>
                     `;
 
-                    resultDiv.style.animation = 'slideIn 0.5s ease';
-                });
-            }
+          resultDiv.style.animation = 'slideIn 0.5s ease';
+        });
+      }
 
-            addBoardSimulator();
+      addBoardSimulator();
 
-            // Add all the animations
-            const style = document.createElement('style');
-            style.textContent = `
+      // Add all the animations
+      const style = document.createElement('style');
+      style.textContent = `
                 @keyframes faqRead {
                     0% { transform: scale(1); }
                     50% { transform: scale(1.02); background: rgba(0, 255, 255, 0.1); }
@@ -623,8 +698,9 @@
                     cursor: pointer;
                 }
             `;
-            document.head.appendChild(style);
-        });
-    </script>
+      document.head.appendChild(style);
+    });
+  </script>
 </body>
+
 </html>

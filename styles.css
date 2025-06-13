@@ -14,13 +14,11 @@
   --dark-purple: #4a0080;
   --gradient-90s: linear-gradient(45deg, var(--neon-teal), var(--neon-magenta), var(--neon-yellow), var(--neon-purple));
   --geometric-pattern:
-    repeating-linear-gradient(
-      45deg,
+    repeating-linear-gradient(45deg,
       transparent,
       transparent 10px,
       rgba(255, 255, 255, 0.1) 10px,
-      rgba(255, 255, 255, 0.1) 20px
-    );
+      rgba(255, 255, 255, 0.1) 20px);
 }
 
 * {
@@ -40,9 +38,17 @@ body {
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Typography */
@@ -81,13 +87,16 @@ body {
 }
 
 @keyframes neonFlicker {
-  0%, 100% {
+
+  0%,
+  100% {
     text-shadow:
       0 0 10px var(--neon-teal),
       0 0 20px var(--neon-teal),
       0 0 30px var(--neon-teal),
       3px 3px 0px var(--black);
   }
+
   50% {
     text-shadow:
       0 0 5px var(--neon-teal),
@@ -259,8 +268,15 @@ body {
 }
 
 @keyframes btnPulse {
-  0%, 100% { box-shadow: 0 0 20px var(--neon-magenta), 0 4px 15px rgba(255, 20, 147, 0.4); }
-  50% { box-shadow: 0 0 30px var(--neon-magenta), 0 6px 20px rgba(255, 20, 147, 0.6); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px var(--neon-magenta), 0 4px 15px rgba(255, 20, 147, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 30px var(--neon-magenta), 0 6px 20px rgba(255, 20, 147, 0.6);
+  }
 }
 
 /* Sections */
@@ -341,11 +357,27 @@ body {
 }
 
 @keyframes glitch {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(2px, -2px); }
+
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
 }
 
 .neon-border {

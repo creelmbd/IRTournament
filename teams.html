@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IR999 Golf Tournament - Teams</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏌️</text></svg>">
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <nav class="nav-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">IR999</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="format.html" class="nav-link">Format</a></li>
+        <li><a href="rules.html" class="nav-link">Rules</a></li>
+        <li><a href="handicap.html" class="nav-link">Handicap</a></li>
+        <li><a href="teams.html" class="nav-link">Teams</a></li>
+        <li><a href="registration.html" class="nav-link active">Register</a></li>
+      </ul>
+      <button class="nav-toggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <section id="teams" class="section" style="padding-top: 120px;">
+    <div class="container">
+      <!-- Page Header -->
+      <div class="page-header" style="text-align: center; margin-bottom: 3rem;">
+        <h1 class="section-title">Tournament Teams</h1>
+        <p style="font-size: 1.2rem; color: var(--neon-yellow); margin-top: 1rem;">
+          🏌️ Meet the Competitors • Team Assignments • Handicap Assignments
+        </p>
+      </div>
+
+      <!-- Tournament Status -->
+      <div class="tournament-status card" style="margin-bottom: 3rem; text-align: center;">
+        <h2
+          style="font-family: 'Luckiest Guy', cursive; color: var(--neon-teal); font-size: 2rem; margin-bottom: 1rem;">
+          📋 Team Formation Status
+        </h2>
+
+        <div id="statusMessage"
+          style="background: rgba(255, 255, 0, 0.1); padding: 2rem; border-radius: 15px; border: 2px solid var(--neon-yellow); margin-bottom: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🚧</div>
+          <h3 style="color: var(--neon-yellow); margin-bottom: 1rem;">Teams Currently Forming</h3>
+          <p style="font-size: 1.1rem; margin: 0;">
+            Team assignments are being finalized! Check back soon to see all the amazing competitors
+            and their handicap assignments for the July 19th tournament.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <div class="status-stat"
+            style="background: rgba(0, 255, 255, 0.1); padding: 1rem; border-radius: 10px; border: 2px solid var(--neon-teal);">
+            <div
+              style="font-family: 'Bungee', cursive; font-size: 2rem; color: var(--neon-teal); text-shadow: 0 0 10px var(--neon-teal);"
+              id="registeredCount">--</div>
+            <div style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Players Registered</div>
+          </div>
+
+          <div class="status-stat"
+            style="background: rgba(255, 0, 255, 0.1); padding: 1rem; border-radius: 10px; border: 2px solid var(--neon-magenta);">
+            <div
+              style="font-family: 'Bungee', cursive; font-size: 2rem; color: var(--neon-magenta); text-shadow: 0 0 10px var(--neon-magenta);"
+              id="teamsFormed">--</div>
+            <div style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Teams Formed</div>
+          </div>
+
+          <div class="status-stat"
+            style="background: rgba(138, 43, 226, 0.1); padding: 1rem; border-radius: 10px; border: 2px solid var(--neon-purple);">
+            <div
+              style="font-family: 'Bungee', cursive; font-size: 2rem; color: var(--neon-purple); text-shadow: 0 0 10px var(--neon-purple);"
+              id="spotsLeft">--</div>
+            <div style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Spots Remaining</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teams Grid -->
+      <div class="teams-section">
+        <h2
+          style="font-family: 'Luckiest Guy', cursive; color: var(--neon-magenta); font-size: 2rem; margin-bottom: 2rem; text-align: center;">
+          🏆 Tournament Teams
+        </h2>
+
+        <div class="teams-grid"
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+
+          <!-- Team Template (will be repeated for each team) -->
+          <div class="team-card card"
+            style="background: rgba(0, 255, 255, 0.1); border: 2px solid var(--neon-teal); position: relative; overflow: hidden;">
+            <div class="team-header"
+              style="background: var(--neon-teal); color: var(--black); padding: 1rem; margin: -2rem -2rem 2rem -2rem; display: flex; justify-content: space-between; align-items: center;">
+              <h3 style="font-family: 'Luckiest Guy', cursive; font-size: 1.5rem; margin: 0;">Team Alpha</h3>
+              <div class="handicap-badge"
+                style="background: var(--black); color: var(--neon-teal); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">
+                EVEN
+              </div>
+            </div>
+
+            <div class="team-content" style="padding: 0 1rem 1rem 1rem;">
+              <div class="players-list">
+                <div class="player"
+                  style="display: flex; align-items: center; margin-bottom: 1rem; padding: 1rem; background: rgba(0, 0, 0, 0.3); border-radius: 10px;">
+                  <div class="player-avatar"
+                    style="width: 40px; height: 40px; background: var(--neon-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold; color: var(--black);">
+                    P1
+                  </div>
+                  <div class="player-info" style="flex: 1;">
+                    <div class="player-name" style="font-weight: bold; margin-bottom: 0.2rem;">Player Name 1</div>
+                    <div class="player-skill" style="font-size: 0.8rem; color: var(--neon-yellow);">A Player</div>
+                  </div>
+                </div>
+
+                <div class="player"
+                  style="display: flex; align-items: center; margin-bottom: 1rem; padding: 1rem; background: rgba(0, 0, 0, 0.3); border-radius: 10px;">
+                  <div class="player-avatar"
+                    style="width: 40px; height: 40px; background: var(--neon-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold; color: var(--black);">
+                    P2
+                  </div>
+                  <div class="player-info" style="flex: 1;">
+                    <div class="player-name" style="font-weight: bold; margin-bottom: 0.2rem;">Player Name 2</div>
+                    <div class="player-skill" style="font-size: 0.8rem; color: var(--neon-yellow);">A Player</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="team-stats"
+                style="background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                <div
+                  style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; font-size: 0.8rem;">
+                  <div>
+                    <div style="color: var(--neon-teal); font-weight: bold;">Handicap</div>
+                    <div>EVEN</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--neon-magenta); font-weight: bold;">Team Type</div>
+                    <div>A + A</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional team cards with different colors and handicaps -->
+          <div class="team-card card"
+            style="background: rgba(255, 0, 255, 0.1); border: 2px solid var(--neon-magenta); position: relative; overflow: hidden;">
+            <div class="team-header"
+              style="background: var(--neon-magenta); color: var(--white); padding: 1rem; margin: -2rem -2rem 2rem -2rem; display: flex; justify-content: space-between; align-items: center;">
+              <h3 style="font-family: 'Luckiest Guy', cursive; font-size: 1.5rem; margin: 0;">Team Bravo</h3>
+              <div class="handicap-badge"
+                style="background: var(--white); color: var(--neon-magenta); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">
+                +4
+              </div>
+            </div>
+
+            <div class="team-content" style="padding: 0 1rem 1rem 1rem;">
+              <div class="players-list">
+                <div class="player"
+                  style="display: flex; align-items: center; margin-bottom: 1rem; padding: 1rem; background: rgba(0, 0, 0, 0.3); border-radius: 10px;">
+                  <div class="player-avatar"
+                    style="width: 40px; height: 40px; background: var(--neon-magenta); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold; color: var(--white);">
+                    P1
+                  </div>
+                  <div class="player-info" style="flex: 1;">
+                    <div class="player-name" style="font-weight: bold; margin-bottom: 0.2rem;">Player Name 3</div>
+                    <div class="player-skill" style="font-size: 0.8rem; color: var(--neon-yellow);">B Player</div>
+                  </div>
+                </div>
+
+                <div class="player"
+                  style="display: flex; align-items: center; margin-bottom: 1rem; padding: 1rem; background: rgba(0, 0, 0, 0.3); border-radius: 10px;">
+                  <div class="player-avatar"
+                    style="width: 40px; height: 40px; background: var(--neon-magenta); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold; color: var(--white);">
+                    P2
+                  </div>
+                  <div class="player-info" style="flex: 1;">
+                    <div class="player-name" style="font-weight: bold; margin-bottom: 0.2rem;">Player Name 4</div>
+                    <div class="player-skill" style="font-size: 0.8rem; color: var(--neon-yellow);">B Player</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="team-stats"
+                style="background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                <div
+                  style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; font-size: 0.8rem;">
+                  <div>
+                    <div style="color: var(--neon-magenta); font-weight: bold;">Handicap</div>
+                    <div>+4</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--neon-teal); font-weight: bold;">Team Type</div>
+                    <div>B + B</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card card"
+            style="background: rgba(255, 255, 0, 0.1); border: 2px solid var(--neon-yellow); position: relative; overflow: hidden;">
+            <div class="team-header"
+              style="background: var(--neon-yellow); color: var(--black); padding: 1rem; margin: -2rem -2rem 2rem -2rem; display: flex; justify-content: space-between; align-items: center;">
+              <h3 style="font-family: 'Luckiest Guy', cursive; font-size: 1.5rem; margin: 0;">Team Charlie</h3>
+              <div class="handicap-badge"
+                style="background: var(--black); color: var(--neon-yellow); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">
+                +6
+              </div>
+            </div>
+
+            <div class="team-content" style="padding: 0 1rem 1rem 1rem;">
+              <div class="players-list">
+                <div class="player"
+                  style="display: flex; align-items: center; margin-bottom: 1rem; padding: 1rem; background: rgba(0, 0, 0, 0.3); border-radius: 10px;">
+                  <div class="player-avatar"
+                    style="width: 40px; height: 40px; background: var(--neon-yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold; color: var(--black);">
+                    P1
+                  </div>
+                  <div class="player-info" style="flex: 1;">
+                    <div class="player-name" style="font-weight: bold; margin-bottom: 0.2rem;">Player Name 5</div>
+                    <div class="player-skill" style="font-size: 0.8rem; color: var(--neon-teal);">A Player</div>
+                  </div>
+                </div>
+
+                <div class="player"
+                  style="display: flex; align-items: center; margin-bottom: 1rem; padding: 1rem; background: rgba(0, 0, 0, 0.3); border-radius: 10px;">
+                  <div class="player-avatar"
+                    style="width: 40px; height: 40px; background: var(--neon-yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold; color: var(--black);">
+                    P2
+                  </div>
+                  <div class="player-info" style="flex: 1;">
+                    <div class="player-name" style="font-weight: bold; margin-bottom: 0.2rem;">Player Name 6</div>
+                    <div class="player-skill" style="font-size: 0.8rem; color: var(--neon-teal);">C Player</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="team-stats"
+                style="background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                <div
+                  style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; font-size: 0.8rem;">
+                  <div>
+                    <div style="color: var(--neon-yellow); font-weight: bold;">Handicap</div>
+                    <div>+6</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--neon-magenta); font-weight: bold;">Team Type</div>
+                    <div>A + C</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card card"
+            style="background: rgba(138, 43, 226, 0.1); border: 2px solid var(--neon-purple); position: relative; overflow: hidden;">
+            <div class="team-header"
+              style="background: var(--neon-purple); color: var(--white); padding: 1rem; margin: -2rem -2rem 2rem -2rem; display: flex; justify-content: space-between; align-items: center;">
+              <h3 style="font-family: 'Luckiest Guy', cursive; font-size: 1.5rem; margin: 0;">Team Delta</h3>
+              <div class="handicap-badge"
+                style="background: var(--white); color: var(--neon-purple); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">
+                +8
+              </div>
+            </div>
+
+            <div class="team-content" style="padding: 0 1rem 1rem 1rem;">
+              <div class="players-list">
+                <div class="player"
+                  style="display: flex; align-items: center; margin-bottom: 1rem; padding: 1rem; background: rgba(0, 0, 0, 0.3); border-radius: 10px;">
+                  <div class="player-avatar"
+                    style="width: 40px; height: 40px; background: var(--neon-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold; color: var(--white);">
+                    P1
+                  </div>
+                  <div class="player-info" style="flex: 1;">
+                    <div class="player-name" style="font-weight: bold; margin-bottom: 0.2rem;">Player Name 7</div>
+                    <div class="player-skill" style="font-size: 0.8rem; color: var(--neon-yellow);">B Player</div>
+                  </div>
+                </div>
+
+                <div class="player"
+                  style="display: flex; align-items: center; margin-bottom: 1rem; padding: 1rem; background: rgba(0, 0, 0, 0.3); border-radius: 10px;">
+                  <div class="player-avatar"
+                    style="width: 40px; height: 40px; background: var(--neon-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold; color: var(--white);">
+                    P2
+                  </div>
+                  <div class="player-info" style="flex: 1;">
+                    <div class="player-name" style="font-weight: bold; margin-bottom: 0.2rem;">Player Name 8</div>
+                    <div class="player-skill" style="font-size: 0.8rem; color: var(--neon-yellow);">C Player</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="team-stats"
+                style="background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                <div
+                  style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; font-size: 0.8rem;">
+                  <div>
+                    <div style="color: var(--neon-purple); font-weight: bold;">Handicap</div>
+                    <div>+8</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--neon-teal); font-weight: bold;">Team Type</div>
+                    <div>B + C</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more team cards as needed - they will follow the same pattern -->
+          <!-- Placeholder for additional teams -->
+          <div class="team-card card"
+            style="background: rgba(255, 255, 255, 0.05); border: 2px dashed var(--neon-teal); position: relative; overflow: hidden; opacity: 0.6;">
+            <div class="team-content" style="padding: 2rem; text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;">➕</div>
+              <h3 style="color: var(--neon-teal); margin-bottom: 1rem;">More Teams Coming Soon</h3>
+              <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;">
+                Additional team assignments will appear here as registration continues
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tournament Field Summary -->
+      <div class="field-summary card" style="margin-bottom: 3rem;">
+        <h2
+          style="font-family: 'Luckiest Guy', cursive; color: var(--neon-teal); font-size: 2rem; margin-bottom: 2rem; text-align: center;">
+          📊 Tournament Field Summary
+        </h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+          <div class="summary-section">
+            <h3 style="color: var(--neon-magenta); margin-bottom: 1rem; text-align: center;">👥 Player Distribution</h3>
+            <div
+              style="background: rgba(255, 0, 255, 0.1); padding: 1.5rem; border-radius: 10px; border: 2px solid var(--neon-magenta);">
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center;">
+                <div>
+                  <div style="font-size: 1.5rem; color: #ffd700; margin-bottom: 0.5rem;">--</div>
+                  <div style="font-size: 0.8rem;">A Players</div>
+                </div>
+                <div>
+                  <div style="font-size: 1.5rem; color: #c0c0c0; margin-bottom: 0.5rem;">--</div>
+                  <div style="font-size: 0.8rem;">B Players</div>
+                </div>
+                <div>
+                  <div style="font-size: 1.5rem; color: #cd7f32; margin-bottom: 0.5rem;">--</div>
+                  <div style="font-size: 0.8rem;">C Players</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-section">
+            <h3 style="color: var(--neon-yellow); margin-bottom: 1rem; text-align: center;">⚖️ Handicap Spread</h3>
+            <div
+              style="background: rgba(255, 255, 0, 0.1); padding: 1.5rem; border-radius: 10px; border: 2px solid var(--neon-yellow);">
+              <div style="font-size: 0.9rem; line-height: 1.6;">
+                <div style="margin: 0.5rem 0;">EVEN: -- teams</div>
+                <div style="margin: 0.5rem 0;">+2 to +4: -- teams</div>
+                <div style="margin: 0.5rem 0;">+5 to +7: -- teams</div>
+                <div style="margin: 0.5rem 0;">+8+: -- teams</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-section">
+            <h3 style="color: var(--neon-purple); margin-bottom: 1rem; text-align: center;">🏌️ Starting Times</h3>
+            <div
+              style="background: rgba(138, 43, 226, 0.1); padding: 1.5rem; border-radius: 10px; border: 2px solid var(--neon-purple);">
+              <div style="font-size: 0.9rem; line-height: 1.6;">
+                <div style="margin: 0.5rem 0;">First Group: TBD</div>
+                <div style="margin: 0.5rem 0;">Shotgun Start: TBD</div>
+                <div style="margin: 0.5rem 0;">Groups: Every 9 min</div>
+                <div style="margin: 0.5rem 0;">Final Group: TBD</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Registration Call to Action -->
+      <div class="registration-cta card"
+        style="margin-bottom: 3rem; text-align: center; background: rgba(0, 255, 255, 0.1); border: 2px solid var(--neon-teal);">
+        <h2
+          style="font-family: 'Luckiest Guy', cursive; color: var(--neon-teal); font-size: 2rem; margin-bottom: 1rem;">
+          Want to Join These Teams?
+        </h2>
+
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+          Don't miss out on the IR999 Golf Tournament! Register now to secure your spot
+          and get paired with the perfect teammate for maximum fun and competition.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="registration.html" class="retro-btn">Register Now</a>
+          <a href="handicap.html" class="retro-btn secondary">Learn About Handicaps</a>
+        </div>
+      </div>
+
+      <!-- Navigation to Other Sections -->
+      <div class="section-navigation" style="text-align: center; margin-top: 3rem;">
+        <h3 style="font-family: 'Luckiest Guy', cursive; color: var(--neon-purple); margin-bottom: 1rem;">
+          Explore More Tournament Info
+        </h3>
+        <p style="margin-bottom: 2rem; opacity: 0.9;">
+          Check out the tournament format, rules, and registration details.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="format.html" class="retro-btn secondary">Tournament Format</a>
+          <a href="rules.html" class="retro-btn secondary">Rules & Conduct</a>
+          <a href="index.html" class="retro-btn secondary">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    // Teams page specific interactions
+    document.addEventListener('DOMContentLoaded', function () {
+      // Add hover effects to team cards
+      const teamCards = document.querySelectorAll('.team-card');
+      teamCards.forEach(card => {
+        if (!card.style.border.includes('dashed')) { // Skip placeholder cards
+          card.addEventListener('mouseenter', function () {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+            this.style.transition = 'all 0.3s ease';
+            this.style.boxShadow = '0 15px 40px rgba(0, 0, 0, 0.4)';
+          });
+
+          card.addEventListener('mouseleave', function () {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = 'none';
+          });
+        }
+      });
+
+      // Add click functionality to expand team details
+      teamCards.forEach(card => {
+        if (!card.style.border.includes('dashed')) {
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', function () {
+            expandTeamDetails(this);
+          });
+        }
+      });
+
+      // Tournament status animations
+      const statusStats = document.querySelectorAll('.status-stat');
+      statusStats.forEach((stat, index) => {
+        stat.addEventListener('mouseenter', function () {
+          this.style.transform = 'scale(1.05)';
+          this.style.transition = 'all 0.3s ease';
+        });
+
+        stat.addEventListener('mouseleave', function () {
+          this.style.transform = 'scale(1)';
+        });
+      });
+
+      // Sample data update function (you can replace with real data)
+      function updateTournamentStats() {
+        // These would be updated with real registration data
+        document.getElementById('registeredCount').textContent = '10';
+        document.getElementById('teamsFormed').textContent = '5';
+        document.getElementById('spotsLeft').textContent = '10';
+      }
+
+      // Initialize with sample data
+      updateTournamentStats();
+
+      // Team search and filter functionality
+      function addTeamFilters() {
+        const teamsSection = document.querySelector('.teams-section');
+        const filterSection = document.createElement('div');
+        filterSection.innerHTML = `
+                    <div style="margin-bottom: 2rem; text-align: center;">
+                        <div style="display: inline-flex; gap: 1rem; align-items: center; flex-wrap: wrap; justify-content: center;">
+                            <input type="text" id="teamSearch" placeholder="🔍 Search teams or players..." style="
+                                padding: 0.8rem;
+                                width: 250px;
+                                border-radius: 25px;
+                                border: 2px solid var(--neon-teal);
+                                background: rgba(0, 0, 0, 0.8);
+                                color: var(--white);
+                                font-size: 1rem;
+                            ">
+
+                            <select id="handicapFilter" style="
+                                padding: 0.8rem;
+                                border-radius: 20px;
+                                border: 2px solid var(--neon-magenta);
+                                background: rgba(0, 0, 0, 0.8);
+                                color: var(--white);
+                                font-size: 1rem;
+                            ">
+                                <option value="">All Handicaps</option>
+                                <option value="EVEN">EVEN</option>
+                                <option value="+2">+2 to +4</option>
+                                <option value="+5">+5 to +7</option>
+                                <option value="+8">+8+</option>
+                            </select>
+
+                            <select id="skillFilter" style="
+                                padding: 0.8rem;
+                                border-radius: 20px;
+                                border: 2px solid var(--neon-yellow);
+                                background: rgba(0, 0, 0, 0.8);
+                                color: var(--white);
+                                font-size: 1rem;
+                            ">
+                                <option value="">All Skill Levels</option>
+                                <option value="A">A Players</option>
+                                <option value="B">B Players</option>
+                                <option value="C">C Players</option>
+                            </select>
+                        </div>
+                    </div>
+                `;
+
+        teamsSection.insertBefore(filterSection, teamsSection.querySelector('.teams-grid'));
+
+        // Add filter functionality
+        const searchInput = document.getElementById('teamSearch');
+        const handicapFilter = document.getElementById('handicapFilter');
+        const skillFilter = document.getElementById('skillFilter');
+
+        function filterTeams() {
+          const searchTerm = searchInput.value.toLowerCase();
+          const handicapValue = handicapFilter.value;
+          const skillValue = skillFilter.value;
+
+          teamCards.forEach(card => {
+            if (card.style.border.includes('dashed')) return; // Skip placeholder
+
+            const teamText = card.textContent.toLowerCase();
+            const handicap = card.querySelector('.handicap-badge').textContent;
+            const skills = Array.from(card.querySelectorAll('.player-skill')).map(el => el.textContent);
+
+            let showCard = true;
+
+            // Search filter
+            if (searchTerm && !teamText.includes(searchTerm)) {
+              showCard = false;
+            }
+
+            // Handicap filter
+            if (handicapValue) {
+              if (handicapValue === 'EVEN' && handicap !== 'EVEN') showCard = false;
+              if (handicapValue === '+2' && !['2', '3', '4'].some(n => handicap.includes(n))) showCard = false;
+              if (handicapValue === '+5' && !['5', '6', '7'].some(n => handicap.includes(n))) showCard = false;
+              if (handicapValue === '+8' && !handicap.includes('8') && !handicap.includes('9')) showCard =
+                false;
+            }
+
+            // Skill filter
+            if (skillValue && !skills.some(skill => skill.includes(skillValue))) {
+              showCard = false;
+            }
+
+            card.style.display = showCard ? 'block' : 'none';
+            if (showCard) {
+              card.style.animation = 'fadeIn 0.5s ease';
+            }
+          });
+        }
+
+        searchInput.addEventListener('input', filterTeams);
+        handicapFilter.addEventListener('change', filterTeams);
+        skillFilter.addEventListener('change', filterTeams);
+      }
+
+      addTeamFilters();
+
+      // Add styles for animations
+      const style = document.createElement('style');
+      style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+
+                .team-card:hover {
+                    cursor: pointer;
+                }
+
+                .player:hover {
+                    background: rgba(255, 255, 255, 0.1) !important;
+                    transition: all 0.2s ease;
+                }
+
+                .handicap-badge {
+                    transition: all 0.3s ease;
+                }
+
+                .team-card:hover .handicap-badge {
+                    transform: scale(1.1);
+                }
+            `;
+      document.head.appendChild(style);
+    });
+
+    // Function to expand team details (modal or inline expansion)
+    function expandTeamDetails(teamCard) {
+      const teamName = teamCard.querySelector('.team-header h3').textContent;
+      const handicap = teamCard.querySelector('.handicap-badge').textContent;
+      const players = Array.from(teamCard.querySelectorAll('.player-name')).map(el => el.textContent);
+      const skills = Array.from(teamCard.querySelectorAll('.player-skill')).map(el => el.textContent);
+
+      // Create expanded details modal
+      const modal = document.createElement('div');
+      modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.9);
+                z-index: 10000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: fadeIn 0.3s ease;
+            `;
+
+      modal.innerHTML = `
+                <div style="background: rgba(0, 0, 0, 0.95); padding: 3rem; border-radius: 20px; border: 3px solid var(--neon-teal); box-shadow: 0 0 30px var(--neon-teal); max-width: 600px; width: 90%;">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <h2 style="font-family: 'Luckiest Guy', cursive; color: var(--neon-teal); font-size: 2.5rem; margin-bottom: 1rem;">${teamName}</h2>
+                        <div style="display: inline-block; background: var(--neon-teal); color: var(--black); padding: 0.5rem 1rem; border-radius: 25px; font-weight: bold; font-size: 1.2rem;">
+                            Handicap: ${handicap}
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                        ${players.map((player, index) => `
+                            <div style="background: rgba(0, 255, 255, 0.1); padding: 2rem; border-radius: 15px; border: 2px solid var(--neon-teal); text-align: center;">
+                                <div style="font-size: 3rem; margin-bottom: 1rem;">🏌️</div>
+                                <h3 style="color: var(--neon-teal); margin-bottom: 0.5rem;">${player}</h3>
+                                <div style="color: var(--neon-yellow); font-weight: bold;">${skills[index]}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+                        <h3 style="color: var(--neon-magenta); margin-bottom: 1rem; text-align: center;">Tournament Strategy Tips</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.9rem;">
+                            <div style="text-align: center;">
+                                <strong style="color: var(--neon-yellow);">Best Ball Round</strong><br>
+                                Focus on individual excellence
+                            </div>
+                            <div style="text-align: center;">
+                                <strong style="color: var(--neon-yellow);">Alternate Shot Round</strong><br>
+                                Communication is key
+                            </div>
+                            <div style="text-align: center;">
+                                <strong style="color: var(--neon-yellow);">Scramble Round</strong><br>
+                                Take calculated risks
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button onclick="this.closest('[style*=fixed]').remove()" class="retro-btn">
+                            Close Team Details
+                        </button>
+                    </div>
+                </div>
+            `;
+
+      document.body.appendChild(modal);
+
+      // Close modal when clicking outside
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          modal.remove();
+        }
+      });
+
+      // Close modal with escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && document.body.contains(modal)) {
+          modal.remove();
+        }
+      });
+    }
+
+    // Function to simulate real-time updates (you can remove this in production)
+    function simulateRealTimeUpdates() {
+      // This would be replaced with actual API calls or database updates
+      setInterval(() => {
+        const registeredEl = document.getElementById('registeredCount');
+        const currentCount = parseInt(registeredEl.textContent);
+
+        // Randomly increase registration count (simulation)
+        if (Math.random() < 0.1 && currentCount < 32) { // 10% chance, max 32 players
+          registeredEl.textContent = (currentCount + 1).toString();
+          registeredEl.style.animation = 'pulse 0.5s ease';
+          setTimeout(() => {
+            registeredEl.style.animation = '';
+          }, 500);
+        }
+      }, 10000); // Check every 10 seconds
+    }
+
+    // Uncomment to enable simulation
+    // simulateRealTimeUpdates();
+  </script>
+</body>
+
+</html>
